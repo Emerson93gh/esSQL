@@ -6,8 +6,6 @@ include_once 'model/conexion.php';
 $sentencia = $db->query("SELECT * FROM usuarios");
 $usuario = $sentencia->fetchAll(PDO::FETCH_OBJ);
 
-var_dump($usuario);
-
 ?>
 <head>
     <meta charset="UTF-8">
@@ -18,6 +16,8 @@ var_dump($usuario);
 <body>
     <h1>esSQL</h1>
     <br>
-    <input type="button" value="">
+    <?php
+        var_dump($usuario);
+    ?>
 </body>
 </html>
