@@ -44,3 +44,21 @@ WHERE first_name LIKE 'S%';
 /* buscando en apellidos los que tengan en el segundo caracter una o */
 SELECT last_name FROM employees
 WHERE last_name LIKE '_o%';
+
+--Condicionando valores NULL
+SELECT last_name, manager_id FROM employees
+WHERE manager_id IS NULL;
+
+--Operador AND
+SELECT employee_id, last_name, job_id, salary FROM employees
+WHERE salary >= 10000
+AND job_id LIKE '%MAN%';
+
+--Operador OR
+SELECT employee_id, last_name, job_id, salary FROM employees
+WHERE salary >= 10000
+OR job_id LIKE '%MAN%';
+
+--Operador NOT
+SELECT last_name, job_id FROM employees
+WHERE job_id NOT IN ('IT_PROG', 'ST_CLERK', 'SA_REP');
